@@ -113,10 +113,6 @@ button{
     font-size: 10px;
     color: white;
 }
-.settings-list{
-    display: flex;
-    width: 100%;
-}
 
 /* SELETTORI COMPOSTI */
 
@@ -133,10 +129,6 @@ button{
 }
 
 /* center-col*/
-.playbar-controls .current,
-.playbar-controls .end {
-    width: 10%;
-}
 .playbar-controls .playbar{
     width: 80%;
     height: 4px;
