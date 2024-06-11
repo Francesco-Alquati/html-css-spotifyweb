@@ -5,33 +5,91 @@
 }
 header{
     position: fixed;
-    left: 75px;
+    left: 50px;
     top: 0px;
     z-index: 1;
-    background-color: rgba(0, 0, 0, 0.294);
+    background-color: #0d0b17;
     text-align: right;
-    width: calc(100vw - 75px);
-    height: 70px;
+    width: calc(100vw - 50px);
+    height: 80px;
 }
+
+/* classi di layout  */
+.row-sidebar{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-between;
+}
+
+/* colonne  */
+.col-100{
+    width: 100%;
+}
+/* sezioni  */
 .bottom-section{
-    height: 100px;
-    background-color: blue;
+    height: 70px;
+    background-color: rgb(43, 43, 43);
 }
 .top-section{
-    height: calc(100vh - 100px);
+    height: calc(100vh - 70px);
     background-color: red;
     display: flex;
 }
 .sidebar{
-    width: 75px;
+    width: 50px;
     background-color: black;
 }
 .main-content{
-    width: calc(100vw - 75px);
-    background-color: green;
+    width: calc(100vw - 50px);
+    background-color: #16161e;
+}
+.content-sidebar{
+    margin-top: 10px;
+    justify-content: space-between;
+}
+
+/* classi di stile  */
+button{
+    padding: 10px;
+    color: white;
+    border: 1px solid white ;
+    border-radius: 20px;
+    width: 200px;
+    background-color: rgba(0, 0, 0, 0);
+    margin-right: 5px;
 }
 .uppercase{
     text-transform: uppercase;
+}
+
+/* selettori  composte */
+.content-sidebar img{
+   width: 25px;
+}
+.content-sidebar li{
+   margin: 5px;
+}
+
+/* background e colori  */
+.white{
+    color: white;
+}
+
+/* margin  */
+.mt-10{
+    margin-top: 10px;
+}
+.mt-20{
+    margin-top: 20px;
+}
+.mb-5{
+    margin-bottom: 5px;
+}
+
+/* testo  */
+.text-center{
+    text-align: center;
 }
 
 @media screen and (min-width: 786px){
