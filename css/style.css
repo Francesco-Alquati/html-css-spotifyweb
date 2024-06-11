@@ -10,12 +10,14 @@ header{
     height: 80px;
 }
 main{
-    height: calc(906px - 80px);
+    height: calc(100vh - 80px);
+    overflow-y: auto;
 }
 
 .container-main{
     max-width: 400px;
     margin: 0 auto;
+    height: 110vh;
 }
 /* CLASSI DI LAYOUT  */
 
