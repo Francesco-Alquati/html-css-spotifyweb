@@ -6,12 +6,12 @@
 header{
     background-color: #0d0b17;
     text-align: right;
-    
     height: 80px;
 }
 main{
+    width: 100%;
     height: calc(100vh - 80px);
-    overflow-y: auto;
+    overflow-y: scroll;
 }
 
 .container-main{
@@ -146,6 +146,9 @@ hr{
 .content-sidebar img{
    width: 25px;
 }
+.content-sidebar div img{
+    width: 20px;
+ }
 .content-sidebar a{
     cursor: pointer;
  }
@@ -168,7 +171,7 @@ hr{
     height: 4px;
 }
 .buttons-list li{
-    margin: 0px 13px 15px 13px;
+    margin: 0px 10px 10px 10px;
 }
 
 /* left-col  */
@@ -262,18 +265,16 @@ hr{
     text-align: center;
 }
 
-
-@media screen and (min-width: 786px){
+/* Responsive  */
+@media screen and (min-width: 576px){
     .sidebar{
-        width: 250px;
+        width: 200px;
     }
     .main-content{
-        width: calc(100vw - 250px);
+        width: calc(100vw - 200px);
     }
-    .left-col, .right-col{
-        width: 15%;
-    }
-    .center-col{
-        width: 70%;
-    }
+}
+
+@media screen and (min-width: 786px){
+ 
 }
