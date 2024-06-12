@@ -3,21 +3,22 @@
     padding: 0;
     box-sizing: border-box;
 }
+body{
+    font-family: Arial, sans-serif;
+}
 header{
-    background-color: #0d0b17;
+    background-color: #0d0b17ac;
     text-align: right;
     height: 80px;
 }
 main{
     width: 100%;
     height: calc(100vh - 80px);
-    overflow-y: scroll;
 }
-
 .container-main{
     max-width: 400px;
     margin: 0 auto;
-    height: 110vh;
+    height: calc(100vh - 80px);
 }
 /* CLASSI DI LAYOUT  */
 
@@ -67,21 +68,28 @@ main{
 }
 .top-section{
     height: calc(100vh - 70px);
-    background-color: red;
     display: flex;
 }
 .sidebar{
     width: 50px;
     background-color: black;
 }
-
+.nav-logo{
+    width: 100%;
+}
 /* content  */
 .main-content{
     width: calc(100vw - 50px);
     background-color: #16161e;
+    overflow-y: scroll;
 }
-.content-sidebar{
+.content-sidebar-top{
     margin-top: 10px;
+    text-align: center;
+}
+.content-sidebar-bottom{
+    margin-top: 10px;
+    text-align: center;
 }
 .content-player{
     margin: 10px;
@@ -92,6 +100,8 @@ main{
     font-size: 12px;
     color: rgba(255, 255, 255, 0.606) ;
 }
+
+
 /* CLASSI DI STILE*/
 
 
@@ -118,7 +128,7 @@ button{
     background-size: cover;
 }
 .buttons-list{
-    list-style-type: none;
+    
     color: white;
     display: flex;
 }
@@ -134,27 +144,36 @@ button{
     font-size: 10px;
     color: white;
 }
-hr{
-    width: 35%;
-    margin: 0 auto;
-    border: 1px solid greenyellow;
+.nav-playlist{
+    display: none;
+    font-size: 20px;
+}
+ul{
+    list-style-type: none;
 }
 /* SELETTORI COMPOSTI */
 
 
 /* sidebar  */
-.content-sidebar img{
+.content-sidebar-top img{
    width: 25px;
 }
-.content-sidebar div img{
+.content-sidebar-bottom img{
     width: 20px;
  }
-.content-sidebar a{
+.content-sidebar-top a,
+.content-sidebar-bottom div{
     cursor: pointer;
  }
-.content-sidebar li{
-   margin: 5px;
+.content-sidebar-top li{
+   margin: 5px 0px;
 }
+.content-sidebar-top span,
+.content-sidebar-bottom span,
+.content-sidebar-top hr,
+.content-sidebar-bottom hr{
+    display: none;
+ }
 
 /* center-col*/
 .playbar-controls .playbar{
@@ -182,7 +201,7 @@ hr{
 }
 .left-col ul{
     font-size: 10px;
-    list-style-type: none;
+    
     margin-left: 15px;
     color: rgba(255, 255, 255, 0.482);
 }
@@ -192,7 +211,6 @@ hr{
 
 /* right-col  */
 .right-col ul{
-    list-style-type: none;
     color: white;
     display: flex;
     font-size: 11px;
@@ -217,7 +235,6 @@ hr{
 
 /* content main  */
 .content-main ul{
-    list-style-type: none;
     display: flex;
     justify-content: center;
     margin-top: 15px;
@@ -225,16 +242,23 @@ hr{
 .content-main li{
    margin: 8px;
 }
+.content-main hr{
+    width: 35%;
+    margin: 0 auto;
+    border: 1px solid greenyellow;
+}
 
 /* content player  */
 .content-player img{
     width: 100%;
+    display: block;
 }
 .content-player h4,
 .content-player div{
     text-align: center;
     margin-top: 5px;
 }
+
 
 /* background e colori  */
 .white{
@@ -264,7 +288,12 @@ hr{
 .text-center{
     text-align: center;
 }
-
+.d-block{
+    display: block;
+}
+.d-none{
+    display: none;
+}
 /* Responsive  */
 @media screen and (min-width: 576px){
     .sidebar{
@@ -273,8 +302,76 @@ hr{
     .main-content{
         width: calc(100vw - 200px);
     }
+    .content-sidebar-top,
+    .content-sidebar-bottom{
+        text-align: left;
+        margin-left: 20px;
+    }
+    .content-sidebar-top span,
+    .content-sidebar-bottom span{
+        display: inline-block;
+        margin-left: 10px;
+    }
+    .content-sidebar-top li,
+    .content-sidebar-bottom div{
+        display: flex;
+        align-items: center;
+     }
+    .content-sidebar-bottom hr{
+        display: block;
+        border: 1px solid rgba(255, 255, 255, 0.482);
+        margin-left: 5px;
+        margin-top: 5px;
+    }
+    .nav-playlist{
+        display: inline-block;
+        margin-top: 30px;
+    }
+    .nav-playlist a{
+        text-decoration: none;
+        color: rgba(255, 255, 255, 0.482);
+    }
+    .nav-playlist li{
+       margin-top: 20px;
+       font-size: 15px;
+    }
+    #logo-small{
+        display: none;
+    }
+    #logo{
+        width: 80%;
+        margin: 10px 0px;
+    }
+    .round-grey-background {
+        margin: 10px 0px 10px 0px;
+    }
+
+    #greenyellow{
+        height: 30px;
+        width: 3px;
+        background-color: greenyellow;
+        position: relative;
+        right: 15px;
+    }
+    .left-col, .right-col{
+        width: 300px;
+    }
+    .center-col{
+        width: calc(100% - 300px);
+    }
+    .container-main{
+        max-width: 350px;
+    }
+    .content-main{
+        font-size: 11px;
+    }
+    .d-block{
+        display: none;
+    }
+    .d-none{
+        display: block;
+    }
 }
 
 @media screen and (min-width: 786px){
- 
 }

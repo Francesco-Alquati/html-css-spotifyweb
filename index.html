@@ -12,19 +12,33 @@
         <div class="sidebar">
             <div class="row-sidebar">
                 <div class="col-100">
-                    <div class="content-sidebar text-center">
-                        <a href=""><img class="mb-5" src="./img/logo-small.svg" alt=""></i></a>
+                    <div class="content-sidebar-top t-grey">
+                        <img id="logo-small" class="mb-5" src="./img/logo-small.svg" alt=""><span><img id="logo" src="./img/logo.svg" alt=""></span></i>
                         <ul>
-                            <li><a href=""><img src="./img/home.svg" alt=""></a></li>
-                            <li><a href=""><img src="./img/search.svg" alt=""></a></li>
-                            <li><a href=""><img src="./img/libreria.svg" alt=""></a></li>
+                            <li><div id="greenyellow"></div><a href=""><img src="./img/home.svg" alt=""></a><span class="white">Home</span></li>
+                            <li><a href=""><img src="./img/search.svg" alt=""></a><span>Cerca</span></li>
+                            <li><a href=""><img src="./img/libreria.svg" alt=""></a><span>La tua libreria</span></li>
                         </ul>
+                        <div class="nav-playlist">
+                            <h4 class="white mb-15">Playlist</h4>
+                            <a href=""><i class="fa-solid fa-square-plus fa-2xl mb-15"></i></a><span>Crea Playlist</span>
+                            <ul class="playlist-list">
+                                <li><a href="">Nome Playlist</a></li>
+                                <li><a href="">Nome Playlist</a></li>
+                                <li><a href="">Nome Playlist</a></li>
+                                <li><a href="">Nome Playlist</a></li>
+                                <li><a href="">Nome Playlist</a></li>
+                                <li><a href="">Nome Playlist</a></li>
+                                <li><a href="">Nome Playlist</a></li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
                 <div class="col-100">
-                    <div class="content-sidebar text-center">
-                        <div><img src="./img/download.svg" alt=""></div>
-                        <a href=""><div class="round-grey-background"></div> </a>
+                    <div class="content-sidebar-bottom">
+                        <div class="t-grey"><img src="./img/download.svg" alt=""><span>Installa app</span></div>
+                        <hr>
+                        <div><div class="round-grey-background"></div><span class="white">John Doe</span></div>
                     </div>
                 </div>
             </div>
@@ -42,13 +56,14 @@
                                     <li>In Evidenza <div><hr></div></li>
                                     <li>Podcast</li>
                                     <li>Classifiche</li>
-                                    <li>Generi e Mood</li>
+                                    <li><div class="d-block">Generi e Mood</div></li>
                                 </ul>
                             </div>
                         </div>
                         <div class="col-100 mb-15">
                             <div class="content-main uppercase ">
                                 <ul>
+                                    <li><div class="d-none">Generi e Mood</div></li>
                                     <li>Nuove Uscite</li>
                                     <li>Scopri</li>
                                 </ul>
