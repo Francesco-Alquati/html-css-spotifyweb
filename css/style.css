@@ -404,4 +404,34 @@ ul{
     .d-none-m{
         display: block;
     }
+    .left-col, .right-col{
+        width: 400px;
+    }
+    .center-col{
+        width: calc(100% - 300px);
+    }
+    .left-col div{
+        display: inline;
+        margin: 0px 5px;
+    }
+}
+@media screen and (min-width: 1200px){
+    .container-main{
+        max-width: 1200px;
+        padding: 0px 10px;
+    }
+    .col-16-lg{
+        width: calc(100% / 6);
+    }
+    .playbar-controls{
+        width: 80%;
+    }
+    .buttons-list{
+    margin-right: 50px;
+    margin-bottom: 5px;
+    }
+    .left-col img{
+        width: 50px;
+        height: 40px;
+    }
 }
