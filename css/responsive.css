@@ -27,6 +27,12 @@
         margin-left: 5px;
         margin-top: 5px;
     }
+    .content-sidebar-bottom{
+        position: absolute;
+        bottom: 65px;
+        width: 180px;
+        background-color: black;
+    }
     .nav-playlist{
         display: inline-block;
         margin-top: 30px;
@@ -142,5 +148,10 @@
     }
     .d-none-lg{
         display: block;
+    }
+}
+@media screen and (max-height: 320px){
+    .content-sidebar-bottom{
+       display: none;
     }
 }

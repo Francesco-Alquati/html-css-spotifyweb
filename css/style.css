@@ -78,6 +78,7 @@ main{
 .nav-logo{
     width: 100%;
 }
+
 /* content  */
 .main-content{
     width: calc(100vw - 50px);
@@ -89,10 +90,8 @@ main{
     text-align: center;
 }
 .content-sidebar-bottom{
-    margin-top: 10px;
     text-align: center;
-    position: relative;
-    z-index: 1;
+    background-color: black;
 }
 .content-player{
     margin: 10px;
@@ -153,7 +152,7 @@ button{
 }
 .playlist-list{
     overflow-y: auto;
-    height: 80%;
+    height: 40vh;
 }
 ul{
     list-style-type: none;
